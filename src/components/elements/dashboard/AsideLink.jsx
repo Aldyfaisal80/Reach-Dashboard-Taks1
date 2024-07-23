@@ -1,16 +1,16 @@
-/* eslint-disable react/prop-types */
 import { Link, useLocation } from "react-router-dom";
 
-export default function AsideLink(props) {
+// eslint-disable-next-line react/prop-types
+export default function AsideLink({ href, children }) {
     const location = useLocation();
-    const isActive = location.pathname === props.href;
+    const isActive = location.pathname === href;
 
     return (
-        <Link to={props.href} className={`active ${isActive ? 'text-gray-100 bg-gray-700' : ''}`}
+        <Link
+            to={href}
+            className={`flex items-center px-6 py-2 mt-4 text-gray-100 bg-opacity-25 ${isActive ? 'bg-gray-700' : 'bg-gray-900'}`}
         >
-            <a className={`flex items-center px-6 py-2 mt-4 text-gray-100 bg-gray-700 bg-opacity-25 ${isActive ? 'active text-gray-100 bg-gray-700' : ''}`}>
-                {props.children}
-            </a>
+            {children}
         </Link>
     );
 }

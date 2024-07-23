@@ -1,4 +1,5 @@
-export default function TableLayout() {
+// eslint-disable-next-line react/prop-types
+export default function TableLayout({children, title}) {
     return (
         <table className="min-w-full">
             <thead>

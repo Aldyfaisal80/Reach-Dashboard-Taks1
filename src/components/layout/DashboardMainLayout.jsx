@@ -5,7 +5,7 @@ import Sidebar from "../fragments/Sidebar";
 export default function DashboardMainLayout () {
     return (
         <div className="w-full h-full overflow-hidden flex items-center justify-center" style={{ background: '#edf2f7' }}>
-            <div className="flex w-full h-full bg-gray-200">
+            <div className="flex w-full h-dvh bg-gray-200">
                 <Sidebar />
                 <div className="flex flex-col flex-1 overflow-hidden">
                     <Navbar />
